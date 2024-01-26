@@ -2,9 +2,10 @@ from collections import Counter
 def get_common_products(products_purchased):
     #code goes here
     counter = Counter(products_purchased)
-  
-    sorted_dict = sorted(counter.items(), key=lambda item: item[1], reverse=True)
-    sorted_dict = sorted_dict[:3]
+    #
+    #  sorted_dict = sorted(counter.items(), key=lambda item: item[1], reverse=True)
+    #  sorted_dict = sorted_dict[:3]
+    sorted_dict = counter.most_common(3)
     return sorted_dict
 
 def main():
