@@ -1,6 +1,11 @@
+from collections import Counter
 def get_common_products(products_purchased):
     #code goes here
-    return
+    counter = Counter(products_purchased)
+  
+    sorted_dict = sorted(counter.items(), key=lambda item: item[1], reverse=True)
+    sorted_dict = sorted_dict[:3]
+    return sorted_dict
 
 def main():
     products_purchased = ["DES005",
